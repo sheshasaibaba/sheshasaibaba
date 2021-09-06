@@ -1,0 +1,18 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <h2 class="active"> Sign In </h2>
+        <form [formGroup]="credentials" (ngSubmit)="onSubmit()">
+            <input matInput type="text" id="login" class="fadeIn second" name="username" placeholder="username" formControlName="username" required>
+            <input matInput type="text" id="password" class="fadeIn third" name="login" placeholder="password" formControlName="password" required>
+            <button mat-raised-button color="primary" class="fadeIn fourth" type="submit"  [disabled]='!credentials.valid'>Submit</button>
+        </form>
+
+
+        <div id="formFooter">
+            <a class="underlineHover" [routerLink]="['/student-register']" routerLinkActive="router-link-active" >Register</a>
+            <br>
+            <a class="underlineHover" (click)="getPassword()">Forgot Password?</a>
+        </div>
+
+    </div>
+</div>

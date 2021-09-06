@@ -1,0 +1,12 @@
+<div *ngIf="!Answer">
+   <form [formGroup]="credentials" (ngSubmit)="onSubmit()">
+    <input matInput type="text" id="login" class="fadeIn first" name="username" placeholder="username"
+        formControlName="username" required>
+        <button mat-raised-button color="primary" class="fadeIn fourth" type="submit"
+            [disabled]='!credentials.valid'>Submit</button>
+</form> 
+</div>
+<div *ngIf="Answer">
+    <p>Your password is <strong class="red">{{password}}</strong> </p>
+</div>
+

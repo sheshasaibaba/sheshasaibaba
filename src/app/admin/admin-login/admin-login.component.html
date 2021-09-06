@@ -1,0 +1,17 @@
+<form [formGroup]="credentials" (ngSubmit)="onSubmit()" class="form-field">
+    <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Username" formControlName="username" required> 
+        <!-- <mat-hint>Hint</mat-hint> -->
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="Password" formControlName="password" required>
+        <!-- <mat-hint>Hint</mat-hint> -->
+    </mat-form-field>
+    <a class="register" [routerLink]="['/admin-register']" routerLinkActive="router-link-active"  href="javascript:void(0)" ><p>Register</p></a>
+    <button mat-raised-button color="primary" type="submit" class="submit" [disabled]= '!credentials.valid'>Submit</button>
+    
+</form>
+
+

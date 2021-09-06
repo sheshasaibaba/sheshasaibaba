@@ -1,0 +1,14 @@
+.form-field{
+    align-items: center;
+    display: block;
+    width: 300px;
+    position: absolute;
+    right: 30vw;
+    top: 20vh;
+    text-align: center;
+}
+.submit{
+    display: flex;
+    align-items: center;
+    left: 40%;
+}
