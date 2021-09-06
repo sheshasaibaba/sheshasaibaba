@@ -1,0 +1,11 @@
+.centered{
+    text-align: center;
+    display: block;
+    width: 200px;
+    top: 20%;
+    position: relative;
+    left: 40%;
+}
+.buttons{
+    margin: 15px;
+}

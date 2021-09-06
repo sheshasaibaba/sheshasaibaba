@@ -1,0 +1,26 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <h2 class="active"> Sign Up </h2>
+        <form [formGroup]="credentials" (ngSubmit)="onSubmit()">
+            <input matInput type="text" id="login" class="fadeIn second" name="username" placeholder="username"
+                formControlName="username" required>
+            <input matInput type="password" id="password" class="fadeIn third"  placeholder="password"
+                formControlName="password" required>
+            <input matInput type="password" id="password" class="fadeIn third" placeholder="Re enter password"
+                formControlName="passwordRe" (input)="onChange()" required>
+                <br>
+                <mat-error *ngIf="error">{{errorMessage}} </mat-error>
+                <br>
+            <button mat-raised-button color="primary" class="fadeIn fourth" type="submit"
+                [disabled]='!credentials.valid'>Submit</button>
+                
+        </form>
+
+
+        <div id="formFooter">
+            <!-- <a class="underlineHover">Forgot Password?</a> -->
+        </div>
+
+    </div>
+</div>
+
